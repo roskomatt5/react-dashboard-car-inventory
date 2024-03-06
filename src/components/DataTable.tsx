@@ -7,11 +7,10 @@ import { useGetData } from "../custom-hooks/FetchData";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90, hide: true },
-  { field: "first", headerName: "Contact First Name", flex: 1 },
-  { field: "last", headerName: "Contact Last Name", flex: 1 },
-  { field: "email", headerName: "Email", flex: 1 },
-  { field: "phone_number", headerName: "Phone Number", flex: 1 },
-  { field: "address", headerName: "Address", flex: 1 },
+  { field: "make", headerName: "Make", flex: 1 },
+  { field: "model", headerName: "Model", flex: 1 },
+  { field: "year", headerName: "Year", flex: 1 },
+  { field: "color", headerName: "Color", flex: 1 },
 ];
 
 function DataTable() {
@@ -42,21 +41,21 @@ function DataTable() {
       <div className="flex flex-row">
         <div>
           <button
-            className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white"
+            className="p-3 bg-black rounded m-3 text-white hover:bg-white hover:text-black"
             onClick={() => handleOpen()}
           >
-            Create New Contact
+            Add To Inventory
           </button>
         </div>
         <Button
           onClick={handleOpen}
-          className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white"
+          className="p-3 bg-black rounded m-3 text-white hover:bg-white hover:text-black"
         >
           Update
         </Button>
         <Button
           onClick={deleteData}
-          className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white"
+          className="p-3 bg-black rounded m-3 text-white hover:bg-white hover:text-black"
         >
           Delete
         </Button>
@@ -65,7 +64,7 @@ function DataTable() {
         className={open ? "hidden" : "container mx-10 my-5 flex flex-col"}
         style={{ height: 400, width: "100%" }}
       >
-        <h2 className="p-3 bg-slate-300 my-2 rounded">My Contacts</h2>
+        <h2 className="p-3 bg-black text-white my-2 rounded">My Garage</h2>
         <DataGrid
           rows={contactData}
           columns={columns}

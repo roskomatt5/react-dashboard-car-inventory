@@ -1,4 +1,4 @@
-import Background from "../assets/images/mountains.jpeg";
+import Background from "../assets/images/fancy_garage.jpeg";
 
 function Home() {
   return (
@@ -7,8 +7,8 @@ function Home() {
       className="flex flex-row justify-center mx-auto bg-cover bg-fixed"
     >
       <div className="flex place-items-center h-screen">
-        <h3 className="p-5 bg-white bg-opacity-50 text-black rounded">
-          Welcome To the Phonebook
+        <h3 className="p-5 bg-black bg-opacity-50 text-white rounded">
+          Welcome To Our Garage
         </h3>
       </div>
     </div>
